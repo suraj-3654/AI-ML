@@ -1,0 +1,23 @@
+# Web Framework & API Support
+fastapi
+uvicorn
+python-multipart
+streamlit
+python-dotenv
+requests
+pydantic
+
+# LangChain Core & Ecosystem
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+
+# Model & Embedding Support
+langchain-groq
+langchain-huggingface
+sentence-transformers
+
+# Vector Store & PDF Processing
+chromadb
+pypdf
