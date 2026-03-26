@@ -27,6 +27,9 @@ This repository contains a production-grade **Retrieval-Augmented Generation (RA
 
 ---
 
+## Current Knowledge.
+**Currenlty the the rag is feeded with basics of cpp and python. You can directly ask question from it.**
+
 ## 🏗️ Complete Setup & Run Instructions
 
 ### Step 1: Clone Repository & Navigate
