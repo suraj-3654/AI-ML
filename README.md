@@ -1,22 +1,42 @@
 # 🏗️ GraphRAG Codebase Architect
 
-**A Full-Stack AI tool that maps your codebase and predicts code change impacts.**
+**A Full-Stack AI Observability Tool for Automated System Mapping & Impact Analysis.**
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![GraphRAG](https://img.shields.io/badge/GraphRAG-Logic-blueviolet?style=for-the-badge)](https://github.com/microsoft/graphrag)
 
-## 🌟 What It Does
+## 🌟 Overview
 
-This tool helps developers understand complex codebases instantly. It reads your code structure and creates a visual map of how everything connects.
+The **Codebase Architect** is a specialized GraphRAG (Graph Retrieval-Augmented Generation) application designed to help developers onboard to complex repositories instantly. Unlike standard RAG which treats code as plain text, this tool uses **Static Analysis (AST)** and **Graph Theory** to understand the structural dependencies and functional intent of a system.
 
-**Key Features:**
-- Maps Python backend + JavaScript frontend code together
-- Predicts which files break when you change one file
-- Groups similar code and explains what each group does
-- Indexes repos in seconds (not hours)
+### 🎯 Key Capabilities
+- **Polyglot Mapping:** Bridges the gap between Frontend (JS/TS) and Backend (Python) by identifying shared API contracts.
+- **Blast Radius Analysis:** Uses Breadth-First Search (BFS) on a dependency graph to predict which modules will break if a specific file is modified.
+- **Automated Summarization:** Clusters code into "Functional Neighborhoods" using the Leiden Algorithm and summarizes their architectural roles using Llama-4.
+- **High-Speed Ingestion:** Implements Shallow Cloning and Thread-Pooled LLM requests to index medium-sized repos in seconds.
 
 ---
+
+## 🛠️ Architecture
+
+
+
+The system is built on a **Decoupled Microservice Architecture**:
+
+1.  **Backend (FastAPI):**
+    * **Ingestion:** Clones repos using `GitPython` (Depth=1).
+    * **Parsing:** Extracts Abstract Syntax Trees (AST) for Python and Regex patterns for JS.
+    * **Graph Engine:** Builds a directed dependency graph using `iGraph`.
+    * **LLM Layer:** Orchestrates batched requests to Groq (Llama-3/4) for contextual summarization.
+2.  **Frontend (Streamlit):**
+    * Provides a chat-based interface for architectural queries.
+    * Visualizes "Impact Alerts" when dangerous code changes are detected.
+
+---
+
+## 🚀 Getting Started
+
 
 ## 🛠️ How It Works
 
