@@ -117,3 +117,4 @@ streamlit run frontend/app.py --server.port 8501
 - Join our [Discord](https://discord.gg/YOUR-DISCORD)
 
 **Made with ❤️ for developers who hate reading other people's code.**
+![alt text](<Screenshot from 2026-04-01 10-04-00.png>)
