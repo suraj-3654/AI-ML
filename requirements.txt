@@ -1,0 +1,20 @@
+# Web Framework & UI
+fastapi
+uvicorn
+streamlit
+requests
+pydantic
+
+# LLM & Orchestration
+langchain
+langchain-community
+langchain-core
+langchain-groq
+python-dotenv
+
+# Graph Engine & Logic
+igraph
+leidenalg
+
+# Repository Management
+GitPython
