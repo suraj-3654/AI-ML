@@ -142,6 +142,7 @@ class CodebaseArchitect:
         t_id = self.nodes.index(target)
         # order=2 catches immediate and secondary dependencies
         impacted = self.graph.neighborhood(vertices=t_id, order=2, mode="all")
+        print("Blast radius calculated...")
         return [self.nodes[i] for i in impacted if self.nodes[i] != target]
 
     def ask(self, query):
