@@ -30,7 +30,6 @@ async def ask_question(req: QueryRequest):
     if not architect.graph:
         raise HTTPException(status_code=400, detail="No repo analyzed yet.")
     answer = architect.ask(req.query)
-    print("ask querry")::
     return {"answer": answer}
 
 @app.post("/clear")
