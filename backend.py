@@ -25,7 +25,7 @@ async def analyze_repo(req: RepoRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/ask")
+@app.post("/ask_question")
 async def ask_question(req: QueryRequest):
     if not architect.graph:
         raise HTTPException(status_code=400, detail="No repo analyzed yet.")
